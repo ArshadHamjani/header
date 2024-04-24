@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Responsive Header</title>
+<link rel="stylesheet" href="asset/css/style.css">
+</head>
+<body>
+
+<header>
+    <nav>
+        <div class="menu-toggle">&#9776;</div>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+    <nav class="navbar">
+        <div class="animated-headline">
+          <h1>Welcome to My Website</h1>
+        </div>
+      </nav>
+      
+</header>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="asset/js/main.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/counterup2/1.0.0/counter.min.js"></script>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scale-Ending Timeline</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/counterup2/1.0.0/counter.min.js"></script>
+    <style>
+        .timeline {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 50px;
+        }
+        .timeline-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        .timeline-item .year {
+            font-size: 24px;
+            margin-right: 10px;
+        }
+        .timeline-item .event {
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <div class="timeline">
+        <div class="timeline-item">
+            <span class="year">2020</span>
+            <span class="event">Event 1</span>
+        </div>
+        <div class="timeline-item">
+            <span class="year">2022</span>
+            <span class="event">Event 2</span>
+        </div>
+        <div class="timeline-item">
+            <span class="year">2024</span>
+            <span class="event">Event 3</span>
+        </div>
+        <!-- Add more timeline items as needed -->
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const timelineItems = document.querySelectorAll('.timeline-item .year');
+            timelineItems.forEach(item => {
+                const yearValue = parseInt(item.textContent.trim());
+                if (!isNaN(yearValue)) {
+                    const counter = new counterUp.Counter(item, {
+                        start: 0,
+                        end: yearValue,
+                        duration: 2000,
+                        delay: 100,
+                        formatter: (value) => value.toFixed(0)
+                    });
+                    counter.start();
+                }
+            });
+        });
+    </script>
+</body>
+</html>
+
+
+</body>
+</html>   
+
+  
